@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delish Bites</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Styles */
+    body {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-red-500 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Delish Food</h1>
+      <nav class="space-x-4">
+      
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-cover bg-center h-screen" style="background-image: url('https://source.unsplash.com/1600x900/?food');">
+    <div class="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-center text-white">
+      <h2 class="text-4xl md:text-6xl font-bold">Savor the Flavors: Best Food Spots Across North America</h2>
+      <p class="text-lg mt-4">Discover the best recipes for any occasion.</p>
+      <button class="mt-6 px-6 py-3 bg-red-500 rounded-full text-lg hover:bg-red-700">Explore Recipes</button>
+    </div>
+  </section>
+
+  <!-- Recipes Section -->
+  <section id="recipes" class="py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Featured Recipes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h3 class="font-bold text-xl">Creamy Alfredo Pasta</h3>
+          <p class="mt-2 text-sm text-gray-600">A rich and creamy delight that you can't resist.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h3 class="font-bold text-xl">Juicy Beef Burger</h3>
+          <p class="mt-2 text-sm text-gray-600">Perfectly grilled and packed with flavor.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h3 class="font-bold text-xl">Fresh Garden Salad</h3>
+          <p class="mt-2 text-sm text-gray-600">Crisp vegetables with a tangy dressing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <p>&copy; 2024 Delish Bites. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll("nav a").forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").slice(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

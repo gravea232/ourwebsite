@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delisious Bites</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Styles */
+    body {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-red-500 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold" text center mb="8">Delishious Food</h1>
+      <nav class="space-x-4">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#recipes" class="hover:underline">Recipes</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-cover bg-center h-screen" style="background-image: url('https://source.unsplash.com/800x900/?food');">
+    <div class="bg-black h-full flex flex-col justify-center items-center text-center text-white">
+      <h2 class="text-3xl md:text-4xl font-semibold">Ultimate Guide to iconic American and Canadian Cuisine</h2>
+    </br>
+      <p class="text-lg mt-4">Discover iconic American dishes, from Southern comfort foods like mac and cheese and BBQ ribs to modern classics like gourmet burgers and avocado toast. Savor American flavors, from mac and cheese and BBQ ribs to gourmet burgers, avocado toast, and regional classics like  classics like gumbo and Chicago pizza.</p>
+      <p class="text-lg mt-4"></p>
+</br>
+      <h3 class="text-2xl md:text-3xl font-semibold">Discover the best recipes for any occasion.</h3>
+</br>
+      <p class="text-lg mt-4">The United States boasts a rich culinary heritage influenced by diverse cultures, regions, and traditions. From the smoky flavors of Southern BBQ to the comforting classics like apple pie and mac and cheese, American cuisine reflects a blend of creativity and history. Explore hearty New England clam chowder, zesty Tex-Mex tacos, and juicy Midwestern burgers. Don’t forget to indulge in soul food, trendy fusion dishes, and an array of desserts that celebrate the sweet side of American innovation.</p>
+</br>
+      <button class="mt-6 px-6 py-3 bg-red-500 rounded-full text-lg hover:bg-red-700">Explore Recipes</button>
+    </div>
+  </section>
+
+  <!-- Recipes Section -->
+  <section id="recipes" class="py-14">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Featured Recipes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h3 class="font-bold text-xl">From Burgers to Pountine: North America's Favorite Comfort Foods</h3>
+          <p class="mt-4 text-sm text-gray-900">Burgers and pountine define North America's comfort food. Juicy burgers offer endless varieties,while pountine's fries gravy, and cheese curds are a Canadianfavorite. These iconic dishes showcase flavor, warmth,and tradition</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h3 class="font-bold text-xl">Tantalizing Tacos: A Taste of Tradition and Creativity</h3>
+          <p class="mt-4 text-sm text-gray-900">Tacos are a versatile and flavorful favorite, featuring soft or crispy shells filled with seasoned meats, fresh veggies, cheese, and zesty sauces. Perfect for any meal, from traditional Mexican-style to creative modern twists.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h3 class="font-bold text-xl">Perfect Pizzas: America's Favorite Slice</h3>
+          <p class="mt-4 text-sm text-gray-900">Pizza is America's go-to comfort food, offering endless variations with savory toppings, melty cheese, and crispy crust. From classic Margherita to creative gourmet pies, pizza is perfect for any occasion.</p>
+        </div>
+          <!-- Card 4 -->
+          <div class="bg-white rounded-lg shadow-lg p-4">
+            <h3 class="font-bold text-xl">The Ultimate Hot Dog Haven</h3>
+            <p class="mt-4 text-sm text-gray-900">The Ultimate Hot Dog Haven Explore hot dogs like never before, from classic flavors to creative twists. Perfect for all hot dog lovers</p>
+          </div>
+           <!-- Card 5 -->
+           <div class="bg-white rounded-lg shadow-lg p-4">
+            <h3 class="font-bold text-xl">Mac & Cheese Magic</h3>
+            <p class="mt-4 text-sm text-gray-900">Mac & Cheese Magic  Dive into the creamy, cheesy goodness that defines ultimate comfort food. From classic recipes to gourmet twists, discover macaroni and cheese like never before</p>
+          </div>
+           <!-- Card 6 -->
+           <div class="bg-white rounded-lg shadow-lg p-4">
+            <h3 class="font-bold text-xl">Butter Tart Bliss</h3>
+            <p class="mt-4 text-sm text-gray-900">Butter Tart Bliss  Indulge in Canada's iconic sweet treat—flaky pastry filled with a rich, gooey caramelized filling. A perfect balance of sweetness and buttery goodness in every bite!</p>
+          </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <p>&copy; 2024 Delish Bites. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll("nav a").forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").slice(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
